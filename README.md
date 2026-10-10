@@ -8,11 +8,15 @@ I build Python applications and automation workflows with a focus on reliability
 
 ## Current engineering work
 
-**SupportOps — verified local mock prototype.** A Python/FastAPI workflow with typed LangGraph routing, owner-scoped synthetic order lookup, SQLite conversation persistence and explicit execution/failure limits. The recorded M1 suite passed 134 project regression tests on Windows with CPython 3.12.14 (1 October 2026), including 27 execution-limit cases. Separate-process checks verified conversation continuity and customer isolation.
+**SupportOps — a locally tested customer-support prototype.** Built with Python, FastAPI and LangGraph, it looks up synthetic orders, keeps each customer's conversations separate and saves conversation history in SQLite. Tests cover how the workflow handles failures and limits the work a request can perform.
 
-This is deterministic local engineering evidence, not a live-model or deployed service. Timeouts bound caller waiting; they do not forcibly stop blocking work. The prototype builds on the supplied SupportOps starter.
+The accepted prototype passed 134 regression tests on Windows with Python 3.12.14 on 1 October 2026, including 27 tests of execution limits. Separate-process checks verified that saved conversations survive a restart and remain isolated between customers. This work builds on a supplied starter, extended with Codex assistance.
 
-The optional S04 provider extension remains **BLOCKED** by an unresolved timeout. Its diagnostic pass is not acceptance. Current project source is not offered as an accepted M1 or S04 release.
+The prototype uses predictable mock responses and synthetic data. It has not been deployed as a service or verified with a live language model. A later attempt to add an optional model provider remains unfinished because of a timeout problem; passing diagnostic tests did not resolve that problem. Timeouts limit how long callers wait, but cannot forcibly stop blocking work. The current working source includes unfinished changes and is not presented as the verified prototype release.
+
+## Open-source contribution focus
+
+I want to apply my Python engineering work to useful open-source contributions: clear bug reports, small fixes, regression tests and practical documentation. My goal is to build a record of reviewed contributions and progress into paid contributor work. I will link accepted contributions here as they become available.
 
 ## Portfolio direction
 
